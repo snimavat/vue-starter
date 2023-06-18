@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+    @apply text-stone-800;
+  }
+  
+  .circle-progress circle {
+    stroke-dashoffset: 0;
+    /*! transition: stroke-dashoffset 2s linear; */
+    stroke-width: 1em;
+  }
+  .circle-progress circle.circle-fill {
+    stroke-dashoffset: 376.99;
+  }
+  .circle-progress:after {
+    content: attr(data-percent)"%";
+    font-size: 1em;
+  }
+  .circle-progress.custom-after:after {
+    content:"";
+  }
+  
+  .row {
+    @apply flex;
+  }
+  
+  .col {
+    @apply flex flex-col;
+  }
+  
+  .circle-10 {
+    @apply inline-flex justify-center items-center w-10 h-10 rounded-full;
+  }
+  
+  .square-10 {
+    @apply inline-flex justify-center items-center w-10 h-10 rounded-lg;
+  }
+  
+  .surface-1 {
+    @apply bg-stone-50;
+  }
+  
+  .surface-2 {
+    @apply bg-stone-100;
+  }
+  
+  .surface-3 {
+    @apply bg-stone-200;
+  }
+  
+  .surface-4 {
+    @apply bg-stone-300;
+  }
+  
+  .surface-dark {
+    @apply bg-stone-600;
+  }
